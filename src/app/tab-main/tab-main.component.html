@@ -1,0 +1,19 @@
+<div class="container">
+
+  <form [formGroup]="inputForm">
+    <input type="radio" name="tabs" [value]="'tab1'" formControlName="tabs" (change)="routeTab()">
+    tab 1
+    <input type="radio" name="tabs" [value]="'tab2'" formControlName="tabs" (change)="routeTab()">
+    tab 2
+    <input type="radio" name="tabs" [value]="'tab3'" formControlName="tabs" (change)="routeTab()">
+    tab 3
+  </form>
+
+  <br><br>
+  <button (click)="onShow()">show</button>
+  <button (click)="onHide()">hide</button>
+
+  <br><br>
+  <router-outlet *ngIf="isShow"></router-outlet>
+
+</div>
