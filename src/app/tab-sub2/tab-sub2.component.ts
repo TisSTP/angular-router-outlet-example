@@ -7,9 +7,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TabSub2Component implements OnInit {
 
+  dataList = ['A', 'B', 'C', 'D'];
+  selectedList = ['B', 'D'];
+
   constructor() { }
 
   ngOnInit() {
+    let result = this.dataList.map(item => {
+      return this.selectedList.includes(item) ? 1 : 0;
+    });
+
+    console.log(result);
   }
 
 }

@@ -15,7 +15,7 @@ import {TabSub3Component} from './tab-sub3/tab-sub3.component';
     TabMainComponent,
     TabSub1Component,
     TabSub2Component,
-    TabSub3Component
+    TabSub3Component,
   ],
   imports: [
     BrowserModule,
