@@ -11,6 +11,7 @@ export class TabMainComponent implements OnInit {
 
   inputForm: FormGroup;
   isShow = false;
+  url = '';
 
   constructor(
     private router: Router,
@@ -37,5 +38,18 @@ export class TabMainComponent implements OnInit {
   onHide() {
     console.log('hide');
     this.isShow = false;
+  }
+
+
+  onSelectFile(event) {
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (e: any) => { // called once readAsDataURL is completed
+        this.url = e.target.result;
+      };
+    }
   }
 }
