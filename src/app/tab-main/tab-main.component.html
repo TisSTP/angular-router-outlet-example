@@ -1,5 +1,13 @@
 <div class="container">
 
+  <!-- route -->
+  <a routerLink="/new-profile">Go New Profile.</a> &nbsp; | &nbsp;
+  <a routerLink="/view-profile">Go View Profile.</a>
+
+  <!-- check condition show new or view profile -->
+  <h2 *ngIf="pageService.isNewProfile(prefixPath)">This is New Profile Page.</h2>
+  <h2 *ngIf="pageService.isViewProfile(prefixPath)">This is View Profile Page.</h2>
+
   <form [formGroup]="inputForm">
     <input type="radio" name="tabs" [value]="'tab1'" formControlName="tabs" (change)="routeTab()">
     tab 1

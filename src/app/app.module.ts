@@ -8,6 +8,7 @@ import {TabMainComponent} from './tab-main/tab-main.component';
 import {TabSub1Component} from './tab-sub1/tab-sub1.component';
 import {TabSub2Component} from './tab-sub2/tab-sub2.component';
 import {TabSub3Component} from './tab-sub3/tab-sub3.component';
+import {PageService} from './services/page.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {TabSub3Component} from './tab-sub3/tab-sub3.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
